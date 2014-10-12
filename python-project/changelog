@@ -1,0 +1,11 @@
+1. Mala zmiana w masterze
+By sprawdzic czy wynik zadania jest taki jak oczekiwalem, musialem przekierowac
+wyjscie watku z zadaniem do StringIO()
+
+2. Plik testow
+W pliku znajduja sie 3 testy (ich opisy sa w komentarzach do nich):
+- pojedyncze zadanie
+- zwolenienie Slave'a
+- duzo zadan
+UWAGA: Caly zestaw testow u mnie wykonywal sie okolo 4 minut.
+ 

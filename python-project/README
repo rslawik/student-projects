@@ -1,0 +1,34 @@
+MASTER - SLAVE
+--------------
+Projekt z Pythona. Moduly Master i Slave umozliwiaja rozproszone
+wykonywanie obliczen. Zadania rozsylane sa przez siec z jednego
+Mastera to wielu Slave'ow. Zadania to skrypty Pythona (*.pyt)
+[patrz pkt. 4]. Utrata komunikacji z Slavem, ktory wykonywal
+jakies zadania, nie powoduje niewykonania zadania - zadanie jest
+przesylane do innego Slave'a.
+
+1. Opis modulow:
+------------------
+Modul Master to serwer rozsylajacy zadania do swoich klientow (Slave).
+Modul Slave to klient, jednostka wykonujaca zadania.
+
+2. Wymagania:
+-------------
+Modul Master wymaga do dzialania PyGTK.
+
+3. Instalacja:
+--------------
+Przygotowana jest paczka. Po jej rozpakowaniu instalacja to wydanie
+polecenia:
+
+python setup.py install
+
+4. Zadania (*.pyt):
+-------------------
+To zwykle skrypty Pythona. Dostepna sa w nich dwie dodatkowe funkcje:
+- add_task(funkcja, (arg1, arg2, ...))
+dodaje zadanie do kolejki zadan i zwraca identyfikator zadania
+UWAGA: funkcja musi importowac sobie wszystkie potrzebne moduly!
+- get_task(identyfikator)
+pobiera wynik zadania o podanym identyfikatorze
+UWAGA: funkcja blokuje az do pojawienia sie wyniku zadania
